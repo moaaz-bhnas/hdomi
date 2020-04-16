@@ -1,8 +1,14 @@
-import React from "react";
-import App from "../../components/App";
+import Banner from '../../components/banner';
+import Categories from '../../components/categories';
+import Layout from '../../components/layout';
 
-export default () => (
-  <App>
-    <p>Next.js Index Page</p>
-  </App>
-);
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Banner />
+      <Categories />
+    </Layout>
+  );
+}
+
+export default IndexPage;
