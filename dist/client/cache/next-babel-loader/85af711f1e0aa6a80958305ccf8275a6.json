@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const title = 'Hdomi';","map":{"version":3,"sources":["C:/Users/bhnas/OneDrive/Desktop/hdomi-seller-center/src/client/shared/data/index.js"],"names":["title"],"mappings":"AAAA,OAAO,MAAMA,KAAK,GAAG,OAAd","sourcesContent":["export const title = 'Hdomi';"]},"metadata":{},"sourceType":"module"}
