@@ -1,13 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './app';
+import GlobalStyles from './global.css';
+import { createStore, applyMiddleware, compose } from 'redux';
+import rootReducer from './redux/reducers/rootReducer';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import dotenv from 'dotenv';
+import firebase from './lib/firebase';
+import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase';
+import { reduxFirestore, createFirestoreInstance, getFirestore } from 'redux-firestore';
+import firebaseConfig from './lib/firebase';
+import { AuthProvider } from './contexts/auth';
+
+// Environment variables
+dotenv.config();
+
+// redux
+const store = createStore(rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+    reduxFirestore(firebase, firebaseConfig)
+  )
+);
+
+const rrfConfig = {
+  useFirestoreForProfile: true,
+  userProfile: 'users'
+}
+
+const rrfProps = {
+  firebase,
+  config: rrfConfig,
+  dispatch: store.dispatch,
+  createFirestoreInstance
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ReactReduxFirebaseProvider {...rrfProps} >
+      <Router>
+        <AuthProvider>
+          <GlobalStyles />
+          <App />
+        </AuthProvider>
+      </Router>
+    </ReactReduxFirebaseProvider>
+  </Provider>, 
   document.getElementById('root')
 );
 
@@ -15,3 +56,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+
