@@ -1,8 +1,6 @@
 import React, { memo } from 'react'
 import AuthForm from '../../components/authForm';
-import {
-  Container
-} from './style';
+import { Container } from '../../components/container/style';
 
 const AuthPage = ({ action }) => {
   return (

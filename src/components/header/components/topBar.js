@@ -22,7 +22,7 @@ const TopBar = () => {
       <Container>
         <Invitation>
           Have a store? 
-          <InvitationLink to="/seller">
+          <InvitationLink to="/register">
             <B>sell with us</B>
           </InvitationLink>
         </Invitation>

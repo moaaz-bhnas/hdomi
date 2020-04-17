@@ -2,12 +2,12 @@ import React, { memo, useState, useCallback } from 'react';
 import {
   Form,
   Title,
-  Input,
   SubmitButton,
   PasswordRecoveryLink,
   P,
   AuthLink
 } from '../style';
+import { Input } from '../../input/style';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../../redux/actions/authActions';
 
