@@ -41,7 +41,7 @@ const rrfProps = {
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps} >
-      <Router>
+      <Router basename="hdomi">
         <AuthProvider>
           <GlobalStyles />
           <App />
