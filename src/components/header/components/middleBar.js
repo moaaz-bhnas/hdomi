@@ -13,6 +13,7 @@ import { AuthContext } from '../../../contexts/auth';
 
 const MiddleBar = () => {
   const user = useContext(AuthContext);
+  console.log(user);
   const chatButtonRef = useRef(null);
 
   return (

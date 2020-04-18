@@ -14,6 +14,7 @@ import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase';
 import { reduxFirestore, createFirestoreInstance, getFirestore } from 'redux-firestore';
 import firebaseConfig from './lib/firebase';
 import { AuthProvider } from './contexts/auth';
+import { DestinationProvider } from './contexts/destination';
 
 // Environment variables
 dotenv.config();
@@ -42,10 +43,12 @@ ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps} >
       <Router basename="hdomi">
-        <AuthProvider>
-          <GlobalStyles />
-          <App />
-        </AuthProvider>
+        <DestinationProvider>
+          <AuthProvider>
+            <GlobalStyles />
+            <App />
+          </AuthProvider>
+        </DestinationProvider>
       </Router>
     </ReactReduxFirebaseProvider>
   </Provider>, 

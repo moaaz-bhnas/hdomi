@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
     firebase.auth().onAuthStateChanged(setUser);
   }, []);
 
-  const destination = useContext(DestinationContext);
+  const { destination } = useContext(DestinationContext);
   const history = useHistory();
   const prevUser = usePrevious(user);
   useEffect(function redirectBasedOnAuthState() {
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   }, [ user ]);
 
   return (
-    <AuthContext.Provider value={{ user }}>
+    <AuthContext.Provider value={ user }>
       {children}
     </AuthContext.Provider>
   )

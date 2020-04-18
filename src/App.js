@@ -25,7 +25,7 @@ const App = () => {
             path="/login" 
             component={props => <AuthPage {...props} action={'login'} />} 
           />
-          <Route 
+          <PrivateRoute 
             path="/register" 
             component={RegisterPage} 
           />
