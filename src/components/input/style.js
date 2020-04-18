@@ -5,9 +5,9 @@ import measurements from '../../shared/measurements';
 export const Input = styled.input`
   font-size: 1rem;
   border: 1px solid ${theme.border.grey};
-  margin-bottom: 1em;
+  margin-bottom: .8em;
   padding: .7em .6em;
-  max-width: 100%;
+  width: ${({ half }) => half ? 'calc(50% - .5em)' : '100%'};
   border-radius: ${measurements.borderRadius.input};
 
   &::placeholder {

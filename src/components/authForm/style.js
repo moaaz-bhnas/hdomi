@@ -7,7 +7,7 @@ import measurements from '../../shared/measurements';
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  maz-width: 38em;
+  max-width: 25em;
 `;
 
 export const Title = styled.h2`
