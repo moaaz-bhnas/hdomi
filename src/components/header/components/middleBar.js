@@ -12,7 +12,7 @@ import AccountDropdown from './accountDropdown';
 import { AuthContext } from '../../../contexts/auth';
 
 const MiddleBar = () => {
-  const { user } = useContext(AuthContext);
+  const user = useContext(AuthContext);
   const chatButtonRef = useRef(null);
 
   return (

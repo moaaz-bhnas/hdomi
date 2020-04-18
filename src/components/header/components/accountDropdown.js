@@ -38,10 +38,11 @@ const MenuItem = (props) => {
 }
 
 const AccountDropdown = ({ chatButtonRef }) => {
-  const { user: { uid } } = useContext(AuthContext);
+  const { uid } = useContext(AuthContext);
 
   // redux
   const profile = useSelector(state => state.firebase.profile);
+  console.log(profile);
   const username = profile.username && profile.username.split(' ')[0]
   const dispatch = useDispatch();
 
