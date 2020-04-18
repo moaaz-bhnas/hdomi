@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import theme from '../../shared/theme';
 import fonts from '../../shared/fonts';
+import { rectButton } from '../button/style';
 
 export const Form = styled.form`
   max-width: 30em;
+  padding-bottom: 2em;
 `;
 
 export const Title = styled.h2`
@@ -36,7 +38,7 @@ export const ShopInfo = styled.div`
 `;
 
 export const WorkingHours = styled.div`
-  
+  margin-bottom: .7em;
 `;
 
 export const InputContainer = styled.div`
@@ -45,4 +47,8 @@ export const InputContainer = styled.div`
 
 export const Label = styled.label`
   
+`;
+
+export const SubmitButton = styled.button`
+  ${rectButton}
 `;

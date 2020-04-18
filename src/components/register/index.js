@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useState, useCallback, useContext } from 'react'
 import {
   Form,
   PersonalInfo,
@@ -9,11 +9,19 @@ import {
   WorkingHours,
   Title,
   InputContainer,
-  Label
+  Label,
+  SubmitButton
 } from './style';
 import { Input } from '../input/style';
+import { useDispatch } from 'react-redux';
+import { registerSeller } from '../../redux/actions/sellerRegistrationActions';
+import { AuthContext } from '../../contexts/auth';
 
 const Register = () => {
+  const dispatch = useDispatch();
+
+  const { uid } = useContext(AuthContext);
+
   const [ firstName, setFirstName ] = useState('');
   const [ lastName, setLastName ] = useState('');
   const [ phoneNumber, setPhoneNumber ] = useState('');
@@ -22,8 +30,14 @@ const Register = () => {
   const [ openingHour, setOpeningHour ] = useState('');
   const [ closingHour, setClosingHour ] = useState('');
 
+  const handleSubmit = useCallback((event) => {
+    event.preventDefault();
+
+    dispatch(registerSeller({ uid, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour }));
+  }, [ firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour ]);
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit} >
       <Title>Register your store</Title>
 
       <PersonalInfo>
@@ -107,6 +121,8 @@ const Register = () => {
           </InputContainer>
         </InputGroup>
       </WorkingHours>
+
+      <SubmitButton type="submit">Register</SubmitButton>
     </Form>
   );
 }

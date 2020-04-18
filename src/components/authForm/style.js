@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import fonts from '../../shared/fonts';
 import theme from '../../shared/theme';
-import measurements from '../../shared/measurements';
+import { rectButton } from '../button/style';
 
 export const Form = styled.form`
   display: flex;
@@ -33,15 +33,7 @@ export const PasswordRecoveryLink = styled(Link)`
 `;
 
 export const SubmitButton = styled.button`
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #fff;
-  background-color: ${theme.bg.accent};
-  border-radius: ${measurements.borderRadius.input};
-  border: none;
-  align-self: flex-start;
-  padding: 1em;
-  cursor: pointer;
+  ${rectButton}
 `;
 
 export const P = styled.p``;
