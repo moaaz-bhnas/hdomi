@@ -6,7 +6,7 @@ import fonts from '../../shared/fonts';
 
 export const StyledHeader = styled.header`
   margin-bottom: 1.5em;
-  // padding-top: 5.375em;
+  padding-top: ${props => props.topBarHidden ?  '3em' : '5.375em'};
 `;
 
 const unvisible = css`
