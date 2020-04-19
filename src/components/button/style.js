@@ -12,4 +12,10 @@ export const rectButton = css`
   align-self: flex-start;
   padding: 1em;
   cursor: pointer;
+  transition: .1s opacity;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
 `;

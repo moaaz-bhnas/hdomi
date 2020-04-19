@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState, useRef, useEffect } from 'react';
 import {
   StyledHeader,
   Title,
@@ -12,13 +12,21 @@ import BottomBar from './components/bottomBar';
 import { title } from '../../shared/data';
 
 const Header = () => {
+  const topAndMidBarsContainerRef = useRef(null);
+
+  const [ topOffset, setTopOffset ] = useState(null);
+  useEffect(function getAndSetHeight() {
+    const topOffset = topAndMidBarsContainerRef.current.offsetHeight;
+    setTopOffset(topOffset);
+  }, []);
+
   return (
-    <StyledHeader>
+    <StyledHeader style={{ paddingTop: topOffset }}>
       <Title>{title}</Title>
 
       <Navigation>
         <NavigationTitle>Navigation Bar</NavigationTitle>
-        <TopAndMiddleBarsContainer>
+        <TopAndMiddleBarsContainer ref={topAndMidBarsContainerRef}>
           <TopBar />
           <MiddleBar />
         </TopAndMiddleBarsContainer>
