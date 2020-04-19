@@ -1,6 +1,6 @@
 import { functions } from '../../lib/firebase';
 
-export const registerSeller = (seller) => {
+export const registerSeller = (seller, history) => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     console.log(seller);
@@ -13,9 +13,9 @@ export const registerSeller = (seller) => {
     }).then(() => {
       const addSellerRole = functions.httpsCallable('addSellerRole');
       console.log(addSellerRole);
-      console.log('email: ', email);
       return addSellerRole({ email });
     }).then((result) => {
+      history.push('/dashboard');
       console.log(result);
     }).catch((err) => {
       console.log(err);

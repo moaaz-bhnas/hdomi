@@ -9,6 +9,7 @@ import {
   Main
 } from './style';
 import RegisterPage from './pages/register';
+import DashboardPage from './pages/dashboard';
 
 const App = () => {
   return (
@@ -28,6 +29,10 @@ const App = () => {
           <PrivateRoute 
             path="/register" 
             component={RegisterPage} 
+          />
+          <PrivateRoute 
+            path="/dashboard" 
+            component={DashboardPage} 
           />
         </Switch>
       </Main>

@@ -1,4 +1,5 @@
-import React, { memo, useState, useCallback, useContext } from 'react'
+import React, { memo, useState, useCallback, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   Form,
   PersonalInfo,
@@ -18,6 +19,8 @@ import { registerSeller } from '../../redux/actions/sellerRegistrationActions';
 import { AuthContext } from '../../contexts/auth';
 
 const Register = () => {
+  const history = useHistory();
+
   const dispatch = useDispatch();
 
   const { uid, email } = useContext(AuthContext);
@@ -33,7 +36,8 @@ const Register = () => {
   const handleSubmit = useCallback((event) => {
     event.preventDefault();
 
-    dispatch(registerSeller({ uid, email, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour }));
+    const seller = { uid, email, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour };
+    dispatch(registerSeller(seller, history));
   }, [ firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour ]);
 
   return (
