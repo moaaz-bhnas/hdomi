@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect, useContext } from 'react';
+import React, { memo, useContext } from 'react';
 import {
   StyledHeader,
   Title,
@@ -11,30 +11,10 @@ import MiddleBar from './components/middleBar';
 import BottomBar from './components/bottomBar';
 import { title } from '../../shared/data';
 import { AuthContext } from '../../contexts/auth';
-import { useFirestoreConnect } from 'react-redux-firebase';
-import { useSelector } from 'react-redux';
 
 const Header = () => {
   const user = useContext(AuthContext);
-
-  useFirestoreConnect([
-    { collection: 'sellers' }
-  ])
-  const sellers = useSelector(state => state.firestore.data.sellers);
-  
-  const [ userHasStore, setUserHasStore ] = useState(null);
-  useEffect(function checkUserHasStoreAndUpdateState() {
-    if (!user) {
-      setUserHasStore(false);
-      return;
-    }
-    if (sellers) {
-      const userHasStore = sellers[user.uid];
-      setUserHasStore(userHasStore);
-    }
-  }, [ user, sellers ]);
-
-  const topBarHidden = (userHasStore === null) || userHasStore;
+  const topBarHidden = user && user.seller;
 
   return (
     <StyledHeader topBarHidden={topBarHidden}>

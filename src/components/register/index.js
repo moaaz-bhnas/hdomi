@@ -20,7 +20,7 @@ import { AuthContext } from '../../contexts/auth';
 const Register = () => {
   const dispatch = useDispatch();
 
-  const { uid } = useContext(AuthContext);
+  const { uid, email } = useContext(AuthContext);
 
   const [ firstName, setFirstName ] = useState('');
   const [ lastName, setLastName ] = useState('');
@@ -33,7 +33,7 @@ const Register = () => {
   const handleSubmit = useCallback((event) => {
     event.preventDefault();
 
-    dispatch(registerSeller({ uid, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour }));
+    dispatch(registerSeller({ uid, email, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour }));
   }, [ firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour ]);
 
   return (

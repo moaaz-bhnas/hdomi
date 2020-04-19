@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState, useContext } from 'react';
+import React, { memo, useEffect, useState, useContext, useCallback } from 'react';
 import {
   StyledTopBar, 
   Container,
@@ -12,10 +12,15 @@ const TopBar = () => {
   const { setDestination } = useContext(DestinationContext);
 
   const [ visible, setVisible ] = useState(true);
+  const checkWindowScrollYAndSetScrolled = useCallback(() => {
+    const visible = window.scrollY <= 100;
+    setVisible(visible);
+  }, [])
   useEffect(function handleScroll() {
-    document.onscroll = function checkWindowScrollYAndSetScrolled() {
-      const visible = window.scrollY <= 100;
-      setVisible(visible);
+    document.addEventListener('scroll', checkWindowScrollYAndSetScrolled);
+
+    return () => {
+      document.removeEventListener('scroll', checkWindowScrollYAndSetScrolled);
     }
   }, []);
   
