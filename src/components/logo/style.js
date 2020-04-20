@@ -8,6 +8,11 @@ export const LogoLink = styled(Link)`
   padding: .2em 0;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    outline-color: ${props => props.outline};
+  }
 `;
 
 // export const LogoImg = styled.img`
@@ -17,4 +22,5 @@ export const LogoLink = styled(Link)`
 export const LogoText = styled.span`
   font-family: ${fonts.serif};
   font-size: ${props => props.fontSize || '2rem'};
+  color: ${props => props.color};
 `;

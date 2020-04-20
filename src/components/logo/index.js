@@ -7,10 +7,10 @@ import {
 import logo from '../../img/logo.png';
 import { title } from '../../shared/data';
 
-const Logo = ({ fontSize }) => {
+const Logo = ({ fontSize, color, outline }) => {
   return (
-    <LogoLink to="/">
-      <LogoText fontSize={fontSize}>{title}</LogoText>
+    <LogoLink outline={outline} to="/">
+      <LogoText fontSize={fontSize} color={color}>{title}</LogoText>
       {/* <LogoImg src={logo} alt="Logo" /> */}
     </LogoLink>
   );

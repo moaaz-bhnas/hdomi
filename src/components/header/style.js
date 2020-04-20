@@ -230,7 +230,7 @@ export const StyledBottomBar = styled.div`
   padding: 2.5em 0;
 `;
 
-export const SidebarToggler = styled.button`
+export const StyledSidebarToggler = styled.button`
   ${buttonStyles}
   height: 3rem;
   padding: 0 1em;
@@ -395,6 +395,10 @@ export const MenuitemIcon = styled.img`
 export const StyledDashboardBar = styled.div`
   background-color: ${theme.bg.secondary};
   height: 3em;
+  display: flex;
+  padding: 0 1.05em;
 
   ${fixedStyles}
 `;
+
+export const StyledDashboardSidebar = styled.div``;
