@@ -6,7 +6,15 @@ import fonts from '../../shared/fonts';
 
 export const StyledHeader = styled.header`
   margin-bottom: 1.5em;
-  padding-top: ${props => props.topBarHidden ?  '3em' : '5.375em'};
+  padding-top: 5.375em;
+
+  &[data-topbar="false"] {
+    padding-top: 3em;
+  }
+
+  &[data-dashboard="true"] {
+    padding-top: 3em;
+  }
 `;
 
 const unvisible = css`
@@ -24,11 +32,15 @@ export const NavigationTitle = styled.h2`
   ${unvisible}
 `;
 
-export const TopAndMiddleBarsContainer = styled.div`
+const fixedStyles = css`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+`;
+
+export const TopAndMiddleBarsContainer = styled.div`
+  ${fixedStyles};
 `;
 
 export const StyledTopBar = styled.div`
@@ -63,52 +75,6 @@ export const InvitationLink = styled(Link)`
 `;
 
 export const B = styled.b``;
-
-// export const TopList = styled.ul`
-//   margin: 0;
-//   list-style: none;
-//   padding-left: 0;
-
-//   display: flex;
-// `;
-
-// const verticalLineAfter = css`
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     right: 0;
-//     align-self: center;
-//     width: 1px;
-//     height: 1em;
-//     background-color: rgba(255, 255, 255, .6);
-//   }
-// `;
-
-// export const TopListItem = styled.li`
-//   padding: 0 .55em;
-//   display: flex;
-//   position: relative;
-
-//   &:last-child {
-//     padding-right: 0;
-//   }
-
-//   &:not(:last-child) {
-//     ${verticalLineAfter}
-//   }
-// `;
-
-// export const TopListLink = styled.a`
-//   display: block;
-//   color: #fff;
-//   text-decoration: none;
-//   padding: .5rem 0;
-
-//   &:hover,
-//   &:focus {
-//     text-decoration: underline;
-//   }
-// `;
 
 export const StyledMiddleBar = styled.div`
   background-color: ${theme.bg.secondary};
@@ -424,4 +390,11 @@ export const MenuitemButton = styled.button`
 export const MenuitemIcon = styled.img`
   width: 1.8em;
   margin-right: .9em;
+`;
+
+export const StyledDashboardBar = styled.div`
+  background-color: ${theme.bg.secondary};
+  height: 3em;
+
+  ${fixedStyles}
 `;
