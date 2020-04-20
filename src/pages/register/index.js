@@ -11,7 +11,7 @@ const RegisterPage = () => {
     <>
       {
         user.seller ?
-        <Redirect to="/dashboard" /> :
+        <Redirect to="/seller" /> :
         <Container>
           <Form />
         </Container>

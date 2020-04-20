@@ -31,7 +31,7 @@ const App = () => {
             component={RegisterPage} 
           />
           <PrivateRoute 
-            path="/dashboard" 
+            path="/seller" 
             component={DashboardPage} 
           />
         </Switch>

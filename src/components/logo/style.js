@@ -8,6 +8,7 @@ export const LogoLink = styled(Link)`
   padding: .2em 0;
   display: flex;
   align-items: center;
+  margin-right: ${({ sellerCenter }) => sellerCenter ? 'auto' : null};
 
   &:hover,
   &:focus {

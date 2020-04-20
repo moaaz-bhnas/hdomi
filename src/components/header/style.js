@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
     padding-top: 3em;
   }
 
-  &[data-dashboard="true"] {
+  &[data-seller-center="true"] {
     padding-top: 3em;
   }
 `;
@@ -392,7 +392,7 @@ export const MenuitemIcon = styled.img`
   margin-right: .9em;
 `;
 
-export const StyledDashboardBar = styled.div`
+export const StyledSellerBar = styled.div`
   background-color: ${theme.bg.secondary};
   height: 3em;
   display: flex;
@@ -401,4 +401,4 @@ export const StyledDashboardBar = styled.div`
   ${fixedStyles}
 `;
 
-export const StyledDashboardSidebar = styled.div``;
+export const StyledSellerSidebar = styled.div``;

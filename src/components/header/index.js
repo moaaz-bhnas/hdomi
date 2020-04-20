@@ -12,24 +12,24 @@ import MiddleBar from './components/middleBar';
 import BottomBar from './components/bottomBar';
 import { title } from '../../shared/data';
 import { AuthContext } from '../../contexts/auth';
-import DashboardBar from './components/dashboardBar';
+import SellerBar from './components/sellerBar';
 
 const Header = () => {
   const { pathname } = useLocation();
-  const dashboardHeader = pathname.includes('dashboard');
+  const sellerHeader = pathname.includes('seller');
 
   const user = useContext(AuthContext);
   const topBarHidden = user && user.seller;
 
   return (
-    <StyledHeader data-topbar={!topBarHidden} data-dashboard={dashboardHeader}>
+    <StyledHeader data-topbar={!topBarHidden} data-seller-center={sellerHeader}>
       <Title>{title}</Title>
 
       <Navigation>
         <NavigationTitle>Navigation Bar</NavigationTitle>
         {
-          dashboardHeader ?
-          <DashboardBar /> :
+          sellerHeader ?
+          <SellerBar /> :
           <>
             <TopAndMiddleBarsContainer>
               {!topBarHidden && <TopBar />}

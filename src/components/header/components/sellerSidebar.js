@@ -1,15 +1,15 @@
 import React, { memo } from 'react'
 import {  
-  StyledDashboardSidebar
+  StyledSellerSidebar
 } from '../style';
 import SidebarToggler from './sidebarToggler';
 
-const DashboardSidebar = () => {
+const SellerSidebar = () => {
   return (
-    <StyledDashboardSidebar>
+    <StyledSellerSidebar>
       <SidebarToggler />
-    </StyledDashboardSidebar>
+    </StyledSellerSidebar>
   );
 }
 
-export default memo(DashboardSidebar);
+export default memo(SellerSidebar);

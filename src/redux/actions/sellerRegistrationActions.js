@@ -15,7 +15,7 @@ export const registerSeller = (seller, history) => {
       console.log(addSellerRole);
       return addSellerRole({ email });
     }).then((result) => {
-      history.push('/dashboard');
+      history.push('/seller');
       console.log(result);
     }).catch((err) => {
       console.log(err);
