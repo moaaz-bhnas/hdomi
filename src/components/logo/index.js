@@ -7,9 +7,9 @@ import {
 import logo from '../../img/logo.png';
 import { title } from '../../shared/data';
 
-const Logo = ({ fontSize, color, outline, sellerCenter }) => {
+const Logo = ({ fontSize, color, sellerCenter = false }) => {
   return (
-    <LogoLink outline={outline} sellerCenter to="/">
+    <LogoLink data-seller-center={sellerCenter} to="/">
       <LogoText fontSize={fontSize} color={color}>{title}</LogoText>
       {/* <LogoImg src={logo} alt="Logo" /> */}
     </LogoLink>

@@ -272,11 +272,14 @@ export const LogoText = styled.span`
   font-family: ${fonts.serif};
 `;
 
-export const StyledCategories = styled.ul`
+const listStyles = css`
   list-style: none;
   padding-left: 0;
   margin: 0;
+`;
 
+export const StyledCategories = styled.ul`
+  ${listStyles}
   display: flex;
 `;
 
@@ -394,7 +397,7 @@ export const MenuitemIcon = styled.img`
 
 export const StyledSellerBar = styled.div`
   background-color: ${theme.bg.secondary};
-  height: 3em;
+  height: ${measurements.height.sellerHeader};
   display: flex;
   padding: 0 1.05em;
 
@@ -402,3 +405,28 @@ export const StyledSellerBar = styled.div`
 `;
 
 export const StyledSellerSidebar = styled.div``;
+
+export const SellerSidebarList = styled.ul`
+  ${listStyles}
+
+  position: fixed;
+  top: ${measurements.height.sellerHeader};
+  left: 0;
+  bottom: 0;
+  width: 15em;
+  background-color: ${theme.bg.secondary};
+  border-top: 1px solid ${theme.border.shuttleGrey};
+`;
+
+export const SellerSidebarItem = styled.li`
+  
+`;
+
+export const SellerSidebarLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+  padding: 1em;
+  border-bottom: 1px solid ${theme.border.shuttleGrey};
+`;

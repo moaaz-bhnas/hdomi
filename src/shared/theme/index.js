@@ -14,7 +14,8 @@ const theme = {
   },
   border: {
     japonica: '#d77e6a',
-    grey: '#ddd'
+    grey: '#ddd',
+    shuttleGrey: '#5f626d'
   }
 }
 

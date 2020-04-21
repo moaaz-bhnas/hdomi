@@ -11,7 +11,7 @@ const SellerBar = () => {
   return (
     <StyledSellerBar>
       <SellerSidebar />
-      <Logo color="#fff" outline="#fff" dashboard />
+      <Logo color="#fff" sellerCenter />
       <Chat />
       <AccountDropdown />
     </StyledSellerBar>

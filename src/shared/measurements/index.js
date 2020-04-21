@@ -4,6 +4,9 @@ const measurements = {
   },
   borderRadius: {
     input: '.1em'
+  },
+  height: {
+    sellerHeader: '3rem'
   }
 }
 
