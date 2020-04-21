@@ -5,10 +5,10 @@ import {
 } from '../style';
 import hamburgerIcon from '../../../img/menu.svg';
 
-const SidebarToggler = () => {
+const SidebarToggler = ({ size }) => {
   return (
     <StyledSidebarToggler>
-      <HamburgerIcon className="sidebar__hamburgerIcon" src={hamburgerIcon} alt="Toggle sidebar" />
+      <HamburgerIcon className="sidebar__hamburgerIcon" size={size} src={hamburgerIcon} alt="Toggle sidebar" />
     </StyledSidebarToggler>
   );
 }

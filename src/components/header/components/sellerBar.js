@@ -13,7 +13,7 @@ const SellerBar = () => {
       <SellerSidebar />
       <Logo color="#fff" sellerCenter />
       <Chat />
-      <AccountDropdown />
+      <AccountDropdown sellerCenter />
     </StyledSellerBar>
   );
 }

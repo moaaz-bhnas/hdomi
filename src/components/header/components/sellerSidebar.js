@@ -32,7 +32,7 @@ const Item = ({ itemObject }) => {
 const SellerSidebar = () => {
   return (
     <StyledSellerSidebar>
-      <SidebarToggler />
+      <SidebarToggler size="1.2em" />
 
       <SellerSidebarList>
         {

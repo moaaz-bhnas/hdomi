@@ -37,12 +37,12 @@ const MenuItem = (props) => {
   )
 }
 
-const AccountDropdown = ({ chatButtonRef }) => {
+const AccountDropdown = ({ chatButtonRef, sellerCenter }) => {
   const { uid } = useContext(AuthContext);
 
   // redux
   const profile = useSelector(state => state.firebase.profile);
-  const username = profile.username && profile.username.split(' ')[0]
+  const firstName = profile.username && profile.username.split(' ')[0]
   const dispatch = useDispatch();
 
   // Refs
@@ -142,7 +142,7 @@ const AccountDropdown = ({ chatButtonRef }) => {
         onClick={() => setMenuExpanded(!menuExpanded)}
         onKeyDown={handleTogglerKeyDown}
       >
-        Hi, {username}
+        Hi, {firstName}
         <DownArrow src={downArrow} alt="" />
       </DropdownToggler>
 
@@ -153,6 +153,7 @@ const AccountDropdown = ({ chatButtonRef }) => {
         aria-activedescendant={Number.isInteger(activeIndex) ? `item${activeIndex+1}` : null}
         visible={menuExpanded}
         onKeyDown={handleMenuKeyDown}
+        data-seller-center={sellerCenter}
       >
         {
           items.map((item, index) => (

@@ -250,7 +250,7 @@ export const StyledSidebarToggler = styled.button`
 `;
 
 export const HamburgerIcon = styled.img`
-  width: 1em;
+  width: ${({ size }) => size ? size : '1em'};
   transition: opacity .1s;
 `;
 
@@ -330,8 +330,8 @@ export const DownArrow = styled.img`
 
 export const DropdownMenu = styled.div`
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   display: ${props => props.visible ? 'flex' : 'none'};
   flex-direction: column;
   background-color: #fff;
@@ -344,11 +344,21 @@ export const DropdownMenu = styled.div`
     position: absolute;
     z-index: -1;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    right: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
     width: .8rem;
     height: .8rem;
     background-color: #fff;
+  }
+
+  &[data-seller-center="true"] {
+    right: 0;
+    transform: translateX(0);
+
+    &::before {
+      right: 3em;
+      transform: translate(0, -50%) rotate(45deg);
+    }
   }
 `;
 
@@ -413,7 +423,7 @@ export const SellerSidebarList = styled.ul`
   top: ${measurements.height.sellerHeader};
   left: 0;
   bottom: 0;
-  width: 15em;
+  width: 16em;
   background-color: ${theme.bg.secondary};
   border-top: 1px solid ${theme.border.shuttleGrey};
 `;
