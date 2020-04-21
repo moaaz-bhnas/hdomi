@@ -3,27 +3,32 @@ import {
   StyledSellerSidebar, 
   SellerSidebarList,
   SellerSidebarItem,
-  SellerSidebarLink
+  SellerSidebarLink,
+  SellerSidebarIcon,
+  RightArrow
 } from '../style';
 import SidebarToggler from './sidebarToggler';
-import dashboardIcon from '../../../img/dashboard.svg';
-import productsIcon from '../../../img/products1.svg';
-import sponsoredIcon from '../../../img/sponsored.svg';
+import SvgDashboard from '../../../svgs/dashboard';
+import SvgProducts from '../../../svgs/products';
+import SvgSponsored from '../../../svgs/sponsored';
+import rightArrow from '../../../img/right-arrow.svg';
 
 const items = [ 
-  { value: 'dashboard',          icon: dashboardIcon },
-  { value: 'products',           icon: productsIcon },
-  { value: 'sponsored products', icon: sponsoredIcon }
+  { value: 'dashboard',          Icon: SvgDashboard },
+  { value: 'products',           Icon: SvgProducts },
+  { value: 'sponsored products', Icon: SvgSponsored }
 ];
 
 const Item = ({ itemObject }) => {
-  const { value, icon } = itemObject;
+  const { value, Icon } = itemObject;
   const href = (value === 'dashboard') ? '/seller' : `/seller/${value.split(' ').join('-')}`;
 
   return (
     <SellerSidebarItem>
       <SellerSidebarLink to={href}>
+        <Icon />
         {value}
+        <RightArrow src={rightArrow} alt="" />
       </SellerSidebarLink>
     </SellerSidebarItem>
   );

@@ -429,14 +429,54 @@ export const SellerSidebarList = styled.ul`
 `;
 
 export const SellerSidebarItem = styled.li`
-  
+  &:last-child {
+    border-bottom: 5px solid ${theme.border.shuttleGrey};
+  }
 `;
 
 export const SellerSidebarLink = styled(Link)`
   text-decoration: none;
-  color: #fff;
+  color: ${theme.text.manatee};
   text-transform: capitalize;
   display: flex;
+  align-items: center;
   padding: 1em;
   border-bottom: 1px solid ${theme.border.shuttleGrey};
+  transition-property: color, background-color;
+  transition-durarion: .1s;
+
+  .svg {
+    width: 1.3em;
+    fill: ${theme.bg.manatee};
+    margin-right: 1em;
+    transition: fill .1s;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: ${theme.bg.tuna};
+
+    .dashboardSvg {
+      fill: #008CFF;
+    }
+
+    .productsSvg {
+      fill: #fed02f;
+    }
+
+    .sponsoredSvg {
+      fill: #1fc876;
+    }
+  }
 `;
+
+export const RightArrow = styled.img`
+  width: .75em;
+  margin-left: auto;
+`;
+
+// export const SellerSidebarIcon = styled.img`
+//   width: 1em;
+//   margin-right: 1em;
+// `;
