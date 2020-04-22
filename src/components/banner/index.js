@@ -4,12 +4,12 @@ import {
   Container,
   BannerImg
 } from './style';
-import banner from '../../img/banner.jpg';
+// import banner from '../../img/banner.jpg';
 
 const Banner = () => {
   return (
     <StyledBanner>
-      <BannerImg src={banner} alt="banner" />
+      <BannerImg src="https://via.placeholder.com/929x400" alt="banner" />
     </StyledBanner>
   );
 }
