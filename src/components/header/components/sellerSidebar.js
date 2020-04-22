@@ -1,10 +1,10 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import {  
   StyledSellerSidebar, 
   SellerSidebarList,
   SellerSidebarItem,
   SellerSidebarLink,
-  SellerSidebarIcon,
   RightArrow
 } from '../style';
 import SidebarToggler from './sidebarToggler';
@@ -19,30 +19,40 @@ const items = [
   { value: 'sponsored products', Icon: SvgSponsored }
 ];
 
-const Item = ({ itemObject }) => {
+const Item = ({ itemObject, index, activeIndex, setActiveIndex }) => {
   const { value, Icon } = itemObject;
   const href = (value === 'dashboard') ? '/seller' : `/seller/${value.split(' ').join('-')}`;
+  
+  const active = (index === activeIndex);
 
   return (
     <SellerSidebarItem>
-      <SellerSidebarLink to={href}>
+      <SellerSidebarLink 
+        className={`sellerSidebar__${value.split(' ')[0]}Link`}
+        to={href} 
+        data-active={active} 
+        onMouseDown={e => e.preventDefault()}
+        onClick={() => setActiveIndex(index)}
+      >
         <Icon />
         {value}
-        <RightArrow src={rightArrow} alt="" />
+        {!active && <RightArrow src={rightArrow} alt="" />}
       </SellerSidebarLink>
     </SellerSidebarItem>
   );
 }
 
 const SellerSidebar = () => {
+  const [ activeIndex, setActiveIndex ] = useState(0);
+
   return (
     <StyledSellerSidebar>
       <SidebarToggler size="1.2em" />
 
       <SellerSidebarList>
         {
-          items.map(item => (
-            <Item key={item.value} itemObject={item} />
+          items.map((item, index) => (
+            <Item key={item.value} itemObject={item} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
           ))
         }
       </SellerSidebarList>

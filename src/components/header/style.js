@@ -444,6 +444,7 @@ export const SellerSidebarLink = styled(Link)`
   border-bottom: 1px solid ${theme.border.shuttleGrey};
   transition-property: color, background-color;
   transition-durarion: .1s;
+  position: relative;
 
   .svg {
     width: 1.3em;
@@ -453,21 +454,44 @@ export const SellerSidebarLink = styled(Link)`
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &[data-active="true"] {
     color: #fff;
-    background-color: ${theme.bg.tuna};
 
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+    }
+
+    &.sellerSidebar__dashboardLink::after {
+      background-color: #008CFF;
+    }
     .dashboardSvg {
       fill: #008CFF;
     }
 
+    &.sellerSidebar__productsLink::after {
+      background-color: #fed02f;
+    }
     .productsSvg {
       fill: #fed02f;
     }
 
+    &.sellerSidebar__sponsoredLink::after {
+      background-color: #1fc876;
+    }
     .sponsoredSvg {
       fill: #1fc876;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: ${theme.bg.tuna};
   }
 `;
 
