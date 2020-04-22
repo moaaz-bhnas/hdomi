@@ -458,6 +458,25 @@ export const SellerSidebarLink = styled(Link)`
   &[data-active="true"] {
     color: #fff;
 
+    .dashboardSvg {
+      fill: #008CFF;
+    }
+
+    .productsSvg {
+      fill: #fed02f;
+    }
+
+    .sponsoredSvg {
+      fill: #1fc876;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: ${theme.bg.tuna};
+  }
+
+  &[data-active="true"] {
     &::after {
       content: '';
       position: absolute;
@@ -470,28 +489,14 @@ export const SellerSidebarLink = styled(Link)`
     &.sellerSidebar__dashboardLink::after {
       background-color: #008CFF;
     }
-    .dashboardSvg {
-      fill: #008CFF;
-    }
 
     &.sellerSidebar__productsLink::after {
       background-color: #fed02f;
-    }
-    .productsSvg {
-      fill: #fed02f;
     }
 
     &.sellerSidebar__sponsoredLink::after {
       background-color: #1fc876;
     }
-    .sponsoredSvg {
-      fill: #1fc876;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    background-color: ${theme.bg.tuna};
   }
 `;
 
