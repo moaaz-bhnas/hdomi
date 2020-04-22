@@ -5,7 +5,8 @@ import {
   SellerSidebarList,
   SellerSidebarItem,
   SellerSidebarLink,
-  RightArrow
+  RightArrow,
+  SellerSidebarLinkText
 } from '../style';
 import SidebarToggler from './sidebarToggler';
 import SvgDashboard from '../../../svgs/dashboard';
@@ -19,11 +20,12 @@ const items = [
   { value: 'sponsored products', Icon: SvgSponsored }
 ];
 
-const Item = ({ itemObject, index, activeIndex, setActiveIndex }) => {
+const Item = ({ itemObject, index, activeIndex, setActiveIndex, expanded }) => {
   const { value, Icon } = itemObject;
   const href = (value === 'dashboard') ? '/seller' : `/seller/${value.split(' ').join('-')}`;
   
   const active = (index === activeIndex);
+  // console.log(expanded);
 
   return (
     <SellerSidebarItem>
@@ -33,10 +35,11 @@ const Item = ({ itemObject, index, activeIndex, setActiveIndex }) => {
         data-active={active} 
         onMouseDown={e => e.preventDefault()}
         onClick={() => setActiveIndex(index)}
+        aria-label={value}
       >
         <Icon />
-        {value}
-        {!active && <RightArrow src={rightArrow} alt="" />}
+        {expanded && <SellerSidebarLinkText>{value}</SellerSidebarLinkText>}
+        {expanded && !active && <RightArrow src={rightArrow} alt="" />}
       </SellerSidebarLink>
     </SellerSidebarItem>
   );
@@ -44,15 +47,26 @@ const Item = ({ itemObject, index, activeIndex, setActiveIndex }) => {
 
 const SellerSidebar = () => {
   const [ activeIndex, setActiveIndex ] = useState(0);
+  const [ expanded, setExpanded ] = useState(true);
 
   return (
     <StyledSellerSidebar>
-      <SidebarToggler size="1.2em" />
+      <SidebarToggler 
+        size="1.2em"
+        onClick={() => setExpanded(!expanded)}
+      />
 
-      <SellerSidebarList>
+      <SellerSidebarList expanded={expanded}>
         {
           items.map((item, index) => (
-            <Item key={item.value} itemObject={item} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+            <Item 
+              key={item.value} 
+              itemObject={item} 
+              index={index} 
+              activeIndex={activeIndex} 
+              setActiveIndex={setActiveIndex} 
+              expanded={expanded}
+            />
           ))
         }
       </SellerSidebarList>

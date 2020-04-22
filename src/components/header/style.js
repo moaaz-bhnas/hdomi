@@ -410,6 +410,7 @@ export const StyledSellerBar = styled.div`
   height: ${measurements.height.sellerHeader};
   display: flex;
   padding: 0 1.05em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
 
   ${fixedStyles}
 `;
@@ -423,9 +424,10 @@ export const SellerSidebarList = styled.ul`
   top: ${measurements.height.sellerHeader};
   left: 0;
   bottom: 0;
-  width: 16em;
+  width: ${({ expanded }) => expanded ? '16rem' : null};
   background-color: ${theme.bg.secondary};
   border-top: 1px solid ${theme.border.shuttleGrey};
+  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .15);
 `;
 
 export const SellerSidebarItem = styled.li`
@@ -449,7 +451,6 @@ export const SellerSidebarLink = styled(Link)`
   .svg {
     width: 1.3em;
     fill: ${theme.bg.manatee};
-    margin-right: 1em;
     transition: fill .1s;
   }
 
@@ -474,6 +475,7 @@ export const SellerSidebarLink = styled(Link)`
   &:hover,
   &:focus {
     background-color: ${theme.bg.tuna};
+    outline-color: #fff;
   }
 
   &[data-active="true"] {
@@ -500,12 +502,11 @@ export const SellerSidebarLink = styled(Link)`
   }
 `;
 
+export const SellerSidebarLinkText = styled.span`
+  margin-left: 1em;
+`;
+
 export const RightArrow = styled.img`
   width: .75em;
   margin-left: auto;
 `;
-
-// export const SellerSidebarIcon = styled.img`
-//   width: 1em;
-//   margin-right: 1em;
-// `;
