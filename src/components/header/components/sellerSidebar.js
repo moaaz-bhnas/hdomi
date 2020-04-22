@@ -20,12 +20,12 @@ const items = [
   { value: 'sponsored products', Icon: SvgSponsored }
 ];
 
-const Item = ({ itemObject, index, activeIndex, setActiveIndex, expanded }) => {
+const Item = ({ itemObject, expanded }) => {
   const { value, Icon } = itemObject;
   const href = (value === 'dashboard') ? '/seller' : `/seller/${value.split(' ').join('-')}`;
   
-  const active = (index === activeIndex);
-  // console.log(expanded);
+  const { pathname } = useLocation();
+  const active = pathname === href;
 
   return (
     <SellerSidebarItem>
@@ -34,7 +34,6 @@ const Item = ({ itemObject, index, activeIndex, setActiveIndex, expanded }) => {
         to={href} 
         data-active={active} 
         onMouseDown={e => e.preventDefault()}
-        onClick={() => setActiveIndex(index)}
         aria-label={value}
       >
         <Icon />
@@ -46,7 +45,6 @@ const Item = ({ itemObject, index, activeIndex, setActiveIndex, expanded }) => {
 }
 
 const SellerSidebar = () => {
-  const [ activeIndex, setActiveIndex ] = useState(0);
   const [ expanded, setExpanded ] = useState(true);
 
   return (
@@ -62,9 +60,6 @@ const SellerSidebar = () => {
             <Item 
               key={item.value} 
               itemObject={item} 
-              index={index} 
-              activeIndex={activeIndex} 
-              setActiveIndex={setActiveIndex} 
               expanded={expanded}
             />
           ))
