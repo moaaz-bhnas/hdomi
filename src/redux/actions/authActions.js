@@ -35,12 +35,13 @@ export const logIn = (credentials) => {
   }
 }
 
-export const signOut = () => {
+export const signOut = (history) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
 
     firebase.auth().signOut().then(() => {
       dispatch({ type: 'SIGNOUT_SUCCESS' })
+      history.push('/');
     }).catch((err) => {
       dispatch({ type: 'SIGNOUT_ERROR', err })
     })

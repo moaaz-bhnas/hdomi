@@ -28,7 +28,7 @@ const Header = () => {
       <Navigation>
         <NavigationTitle>Navigation Bar</NavigationTitle>
         {
-          sellerHeader ?
+          (user && sellerHeader) ?
           <SellerBar /> :
           <>
             <TopAndMiddleBarsContainer>

@@ -1,4 +1,5 @@
 import React, { memo, useState, useRef, useContext, useCallback, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { AuthContext } from '../../../contexts/auth';
 import { signOut } from '../../../redux/actions/authActions';
@@ -126,9 +127,10 @@ const AccountDropdown = ({ previousInteractiveElement, sellerCenter }) => {
     } 
   }, [ activeIndex ]);
 
+  const history = useHistory();
   const items = [
     { value: 'Orders',  link: true,   href: `/user/${uid}/orders`, icon: orderIcon },
-    { value: 'Log out', link: false,  handleClick: () => dispatch(signOut()) }
+    { value: 'Log out', link: false,  handleClick: () => dispatch(signOut(history)) }
   ];
 
   return (
