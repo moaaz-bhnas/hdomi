@@ -37,7 +37,7 @@ const MenuItem = (props) => {
   )
 }
 
-const AccountDropdown = ({ chatButtonRef, sellerCenter }) => {
+const AccountDropdown = ({ previousInteractiveElement, sellerCenter }) => {
   const { uid } = useContext(AuthContext);
 
   // redux
@@ -120,7 +120,7 @@ const AccountDropdown = ({ chatButtonRef, sellerCenter }) => {
     } else if (shiftKey && key === 'Tab') {
       event.preventDefault();
       setMenuExpanded(false);
-      chatButtonRef.current.focus();
+      previousInteractiveElement.current.focus();
     } else if (key === 'Tab') {
       setMenuExpanded(false);
     } 

@@ -102,6 +102,7 @@ export const StyledSearchForm = styled.form`
 `;
 
 const buttonStyles = css`
+  font-family: ${fonts.sansSerif};
   border: none;
   background-color: transparent;
 
@@ -201,6 +202,25 @@ export const ChatToggler = styled.button`
 
   .chatSvg {
     ${svgStyles}
+  }
+`;
+
+export const StoreLink = styled(Link)`
+  ${buttonStyles}
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  height: 3rem;
+  transition: .1s opacity;
+  margin-right: .8em;
+
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: .6;
+    outline-color: #fff;
   }
 `;
 

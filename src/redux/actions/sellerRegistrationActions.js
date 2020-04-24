@@ -1,7 +1,7 @@
 import { functions } from '../../lib/firebase';
 
 export const registerSeller = (seller, history) => {
-  return (dispatch, getState, { getFirestore }) => {
+  return async (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     console.log(seller);
     const { uid, email, firstName, lastName, phoneNumber, storeName, address, openingHour, closingHour } = seller;
@@ -12,7 +12,6 @@ export const registerSeller = (seller, history) => {
       dispatch({ type: 'SELLER_REGISTRATION_SUCCESS' });
     }).then(() => {
       const addSellerRole = functions.httpsCallable('addSellerRole');
-      console.log(addSellerRole);
       return addSellerRole({ email });
     }).then((result) => {
       history.push('/seller');

@@ -1,7 +1,8 @@
 import React, { memo, useContext, useRef } from 'react';
 import {
   StyledMiddleBar, 
-  Container
+  Container,
+  StoreLink
 } from '../style';
 import SearchForm from './searchForm';
 import Favorites from './favorites';
@@ -13,7 +14,7 @@ import { AuthContext } from '../../../contexts/auth';
 
 const MiddleBar = () => {
   const user = useContext(AuthContext);
-  const chatButtonRef = useRef(null);
+  const storeLinkRef = useRef(null);
 
   return (
     <StyledMiddleBar>
@@ -24,8 +25,9 @@ const MiddleBar = () => {
           user ?
           <>
             <Favorites />
-            <Chat ref={chatButtonRef} />
-            <AccountDropdown chatButtonRef={chatButtonRef} />
+            <Chat />
+            <StoreLink to="/seller" ref={storeLinkRef}>My store</StoreLink>
+            <AccountDropdown previousInteractiveElement={storeLinkRef} />
           </> :
           <Auth />
         }
