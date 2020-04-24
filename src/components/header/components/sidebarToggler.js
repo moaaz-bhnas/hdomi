@@ -9,6 +9,7 @@ const SidebarToggler = ({ size, onClick }) => {
   return (
     <StyledSidebarToggler
       onClick={onClick}
+      onMouseDown={e => e.preventDefault()}
     >
       <HamburgerIcon className="sidebar__hamburgerIcon" size={size} src={hamburgerIcon} alt="Toggle sidebar" />
     </StyledSidebarToggler>

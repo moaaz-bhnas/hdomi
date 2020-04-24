@@ -1,5 +1,6 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useContext } from 'react'
 import { useLocation } from 'react-router-dom';
+import { LayoutContext } from '../../../contexts/layout';
 import {  
   StyledSellerSidebar, 
   SellerSidebarList,
@@ -45,7 +46,10 @@ const Item = ({ itemObject, expanded }) => {
 }
 
 const SellerSidebar = () => {
-  const [ expanded, setExpanded ] = useState(true);
+  const { 
+    sellerSidebarExpanded: expanded, 
+    setSellerSidebarExpanded: setExpanded 
+  } = useContext(LayoutContext);
 
   return (
     <StyledSellerSidebar>

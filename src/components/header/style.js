@@ -444,7 +444,7 @@ export const SellerSidebarList = styled.ul`
   top: ${measurements.height.sellerHeader};
   left: 0;
   bottom: 0;
-  width: ${({ expanded }) => expanded ? '16rem' : null};
+  width: ${({ expanded }) => expanded ? measurements.width.sidebar : measurements.width.sidebarCollapsed};
   background-color: ${theme.bg.secondary};
   border-top: 1px solid ${theme.border.shuttleGrey};
   box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .15);
@@ -462,11 +462,12 @@ export const SellerSidebarLink = styled(Link)`
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  padding: 1em;
+  justify-content: center;
   border-bottom: 1px solid ${theme.border.shuttleGrey};
   transition-property: color, background-color;
   transition-durarion: .1s;
   position: relative;
+  padding: 1em;
 
   .svg {
     width: 1.3em;
@@ -524,9 +525,9 @@ export const SellerSidebarLink = styled(Link)`
 
 export const SellerSidebarLinkText = styled.span`
   margin-left: 1em;
+  margin-right: auto;
 `;
 
 export const RightArrow = styled.img`
   width: .75em;
-  margin-left: auto;
 `;
