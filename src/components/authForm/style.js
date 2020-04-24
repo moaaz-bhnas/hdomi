@@ -34,6 +34,7 @@ export const PasswordRecoveryLink = styled(Link)`
 
 export const SubmitButton = styled.button`
   ${rectButton}
+  align-self: flex-start;
 `;
 
 export const P = styled.p``;

@@ -102,7 +102,6 @@ export const StyledSearchForm = styled.form`
 `;
 
 const buttonStyles = css`
-  font-family: ${fonts.sansSerif};
   border: none;
   background-color: transparent;
 
@@ -208,7 +207,7 @@ export const ChatToggler = styled.button`
 export const StoreLink = styled(Link)`
   ${buttonStyles}
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   height: 3rem;
   transition: .1s opacity;
@@ -232,7 +231,7 @@ export const AuthLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   padding: .5rem 0;
-  font-weight: 600;
+  font-weight: 700;
 
   &:hover,
   &:focus {
@@ -315,7 +314,7 @@ export const CategoryLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   padding: 1em 1.5em;
   letter-spacing: .05em;
 
@@ -331,7 +330,7 @@ export const DropdownContainer = styled.div`
 
 export const DropdownToggler = styled.button`
   ${buttonStyles}
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   height: 3rem;
   transition: .1s opacity;
@@ -396,7 +395,7 @@ export const MenuitemLink = styled(Link)`
   &:hover,
   &:focus,
   &[tabindex="0"] {
-    font-weight: 600;
+    font-weight: 700;
     background-color: ${theme.bg.grey};
   }
 
@@ -409,7 +408,7 @@ export const MenuitemButton = styled.button`
   ${buttonStyles};
   text-transform: uppercase;
   font-size: .9rem;
-  font-weight: 600;
+  font-weight: 700;
   color: ${theme.text.interactive};
   padding: 1.1em 0;
 

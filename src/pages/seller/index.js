@@ -5,29 +5,37 @@ import Dashboard from './pages/dashboard';
 import Products from './pages/products';
 import SponsoredProducts from './pages/sponsoredProducts';
 import {
-  SellerPage
+  SellerPage, 
+  Container
 } from './style';
+import AddProduct from './pages/addProduct';
 
 const Seller = ({ match: { url } }) => {
   const { sellerSidebarExpanded: sidebarExpanded } = useContext(LayoutContext);
 
   return (
     <SellerPage sidebarExpanded={sidebarExpanded}>
-      <Switch>
-        <Route 
-          exact
-          path={`${url}/`}
-          component={Dashboard}
-        />
-        <Route 
-          path={`${url}/products`}
-          component={Products}
-        />
-        <Route 
-          path={`${url}/sponsored-products`}
-          component={SponsoredProducts}
-        />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route 
+            exact
+            path={`${url}/`}
+            component={Dashboard}
+          />
+          <Route 
+            path={`${url}/products`}
+            component={Products}
+          />
+          <Route 
+            path={`${url}/sponsored-products`}
+            component={SponsoredProducts}
+          />
+          <Route 
+            path={`${url}/add-product`}
+            component={AddProduct}
+          />
+        </Switch>
+      </Container>
     </SellerPage>
   );
 }

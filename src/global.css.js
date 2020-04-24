@@ -18,5 +18,6 @@ export default createGlobalStyle`
   button {
     font-size: 1rem;
     cursor: pointer;
+    font-family: ${fonts.sansSerif};
   }
 `;

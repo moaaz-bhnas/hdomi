@@ -1,8 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo } from 'react';
+import { AddProductButton } from '../../../components/button';
 
 const Products = () => {
   return (
-    <>Products</>
+    <AddProductButton>
+
+      Add Product
+    </AddProductButton>
   );
 }
 

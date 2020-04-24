@@ -4,7 +4,7 @@ const measurements = {
   },
   width: {
     sidebar: '16em',
-    sidebarCollapsed: '3.5em'
+    sidebarCollapsed: '4em'
   },
   borderRadius: {
     input: '.1em'

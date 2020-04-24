@@ -6,3 +6,8 @@ export const SellerPage = styled.div`
   measurements.width.sidebar : 
   measurements.width.sidebarCollapsed};
 `;
+
+export const Container = styled.div`
+  max-width: ${measurements.maxWidth.container};
+  margin: 0 auto;
+`;
