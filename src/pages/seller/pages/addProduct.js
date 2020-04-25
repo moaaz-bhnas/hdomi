@@ -1,8 +1,9 @@
 import React, { memo } from 'react'
+import AddProductForm from '../../../components/addProductForm';
 
 const AddProduct = () => {
   return (
-    <>Add product</>
+    <AddProductForm />
   );
 }
 

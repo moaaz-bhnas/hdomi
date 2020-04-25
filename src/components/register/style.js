@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../shared/theme';
-import fonts from '../../shared/fonts';
 import { rectButton } from '../button/style';
+import { title } from '../title/style';
 
 export const Form = styled.form`
   max-width: 30em;
@@ -9,9 +9,7 @@ export const Form = styled.form`
 `;
 
 export const Title = styled.h2`
-  font-family: ${fonts.serif};
-  font-size: 1.9rem;
-  margin-bottom: 1.5em;
+  ${title}
 `;
 
 export const PersonalInfo = styled.div`

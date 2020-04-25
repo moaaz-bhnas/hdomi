@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import fonts from '../../shared/fonts';
 import theme from '../../shared/theme';
 import { rectButton } from '../button/style';
+import { title } from '../title/style';
 
 export const Form = styled.form`
   display: flex;
@@ -11,9 +12,7 @@ export const Form = styled.form`
 `;
 
 export const Title = styled.h2`
-  font-family: ${fonts.serif};
-  font-size: 1.9rem;
-  margin-bottom: 1.5em;
+  ${title}
 `;
 
 const linkStyles = css`
