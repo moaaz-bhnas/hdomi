@@ -13,12 +13,14 @@ const theme = {
     secondaryLightOpposite: '#766852',
     grey: '#EDEDED',
     manatee: '#8D8F97',
-    tuna: '#323544'
+    tuna: '#323544',
+    success: '#357f2f'
   },
   border: {
     japonica: '#d77e6a',
     grey: '#ddd',
-    shuttleGrey: '#494b59'
+    shuttleGrey: '#494b59',
+    success: '#357f2f'
   }
 }
 

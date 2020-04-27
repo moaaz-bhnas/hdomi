@@ -20,4 +20,12 @@ export default createGlobalStyle`
     cursor: pointer;
     font-family: ${fonts.sansSerif};
   }
+
+  input,
+  textarea {
+    &::placeholder {
+      font-size: 1rem;
+      color: #686868;
+    }
+  }
 `;

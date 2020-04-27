@@ -15,11 +15,16 @@ export const rectButton = css`
   transition: .1s opacity;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
 
   &:hover,
   &:focus {
     opacity: .8;
   }
+`;
+
+export const Button = styled.button`
+  ${rectButton};
 `;
 
 export const AddProduct = styled(Link)`
@@ -30,4 +35,9 @@ export const AddProduct = styled(Link)`
 export const AddIcon = styled.img`
   width: 1em;
   margin-right: .55em;
+`;
+
+export const NextIcon = styled.img`
+  width: 1em;
+  margin-left: .55em;
 `;
