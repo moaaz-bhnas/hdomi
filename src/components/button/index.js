@@ -17,10 +17,12 @@ export const AddProductButton = () => {
   );
 }
 
-export const NextButton = ({ disabled }) => {
-  console.log('disabled: ', disabled);
+export const NextButton = ({ onClick }) => {
   return (
-    <Button type="submit" disabled={disabled}>
+    <Button 
+      type="submit"
+      onClick={onClick}
+    >
       Next
       <NextIcon src={nextIcon} alt="" />
     </Button>

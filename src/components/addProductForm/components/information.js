@@ -10,8 +10,8 @@ import { NextButton } from '../../button';
 const categories = [ 'men', 'women', 'boys', 'girls' ];
 const subCategories = [ 'Pants & Jeans', 'T-Shirts & Polos', 'Slippers', 'Formal Shoes', 'Watches', 'Sunglasses', 'Accessories' ];
 
-const Information = ({ productName, setProductName, category, setCategory, subCategory, setSubCategory, description, setDescription }) => {
-  const nextDisabled = [ productName, category, subCategory, description ].some(value => value === '');
+const Information = ({ productName, setProductName, category, setCategory, subCategory, setSubCategory, description, setDescription, onStepSubmit }) => {
+  const disabled = [ productName, category, subCategory, description ].some(value => value === '');
 
   return (
     <>
@@ -70,7 +70,7 @@ const Information = ({ productName, setProductName, category, setCategory, subCa
         required
       />
 
-      <NextButton disabled={nextDisabled} />
+      <NextButton onClick={event => onStepSubmit(event, disabled)} />
     </>
   );
 }

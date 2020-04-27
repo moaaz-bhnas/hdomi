@@ -1,69 +1,53 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useState, useCallback } from 'react'
 import {
   Form,
   Title,
-  ProgressBar,
-  Step,
-  StepText,
-  StepIconContainer,
   FormContainer
 } from './style';
-import InformationSvg from '../../svgs/information';
-import ColorsSvg from '../../svgs/colors';
-import ImagesSvg from '../../svgs/images';
-import PriceSvg from '../../svgs/price';
 import Information from './components/information'; 
-
-const steps = [
-  { text: 'information',              Icon: InformationSvg },
-  { text: 'colors\u00A0&\u00A0sizes', Icon: ColorsSvg },
-  { text: 'images',                   Icon: ImagesSvg },
-  { text: 'price',                    Icon: PriceSvg }
-];
+import ProgressBar from './components/ProgressBar';
+import ColorsAndSizes from './components/colorsAndSizes';
 
 const AddProductForm = () => {
+  // Inputs
   const [ productName, setProductName ] = useState('');
   const [ category, setCategory ] = useState('');
   const [ subCategory, setSubCategory ] = useState('');
   const [ description, setDescription ] = useState('');
+  
+  // Active step
+  const [ activeStep, setActiveStep ] = useState(0);
 
+  const handleStepSubmit = useCallback((event, disabled) => {    
+    if (!disabled) {
+      event.preventDefault();
+      setActiveStep(activeStep + 1);
+    }
+  }, [ activeStep ]);
+    
   return (
     <Form>
       <Title>Add Product</Title>
 
-      <ProgressBar
-        role="progressbar"
-        aria-valuenow="0" 
-        aria-valuemin="0" 
-        aria-valuemax="3"
-      >
-        {
-          steps.map(({ text, Icon }, index) => (
-            <Step 
-              key={text} 
-              data-finished={false}
-              data-active={index === 0}
-            >
-              <StepIconContainer className="progressbar__iconContainer">
-                <Icon />
-              </StepIconContainer>
-              <StepText>{text}</StepText>
-            </Step>
-          ))
-        }
-      </ProgressBar>
+      <ProgressBar />
 
       <FormContainer>
-        <Information 
-          productName={productName}
-          setProductName={setProductName}
-          category={category}
-          setCategory={setCategory}
-          subCategory={subCategory}
-          setSubCategory={setSubCategory}
-          description={description}
-          setDescription={setDescription}
-        />
+        {
+          activeStep === 0 ?
+          <Information 
+            productName={productName}
+            setProductName={setProductName}
+            category={category}
+            setCategory={setCategory}
+            subCategory={subCategory}
+            setSubCategory={setSubCategory}
+            description={description}
+            setDescription={setDescription}
+            setActiveStep={activeStep}
+            onStepSubmit={handleStepSubmit}
+          /> :
+          <ColorsAndSizes />
+        }
       </FormContainer>
     </Form>
   );

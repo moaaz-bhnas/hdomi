@@ -14,7 +14,7 @@ export const Title = styled.h2`
   ${title}
 `;
 
-export const ProgressBar = styled.div`
+export const StyledProgressBar = styled.div`
   display: flex;
   justify-content: space-between;
   width: 48em;
