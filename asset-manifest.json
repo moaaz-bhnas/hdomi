@@ -1,26 +1,33 @@
 {
   "files": {
-    "main.js": "/hdomi/static/js/main.439d5724.chunk.js",
-    "main.js.map": "/hdomi/static/js/main.439d5724.chunk.js.map",
+    "main.js": "/hdomi/static/js/main.448f82e6.chunk.js",
+    "main.js.map": "/hdomi/static/js/main.448f82e6.chunk.js.map",
     "runtime-main.js": "/hdomi/static/js/runtime-main.1644c9fa.js",
     "runtime-main.js.map": "/hdomi/static/js/runtime-main.1644c9fa.js.map",
-    "static/js/2.db600840.chunk.js": "/hdomi/static/js/2.db600840.chunk.js",
-    "static/js/2.db600840.chunk.js.map": "/hdomi/static/js/2.db600840.chunk.js.map",
+    "static/css/2.2ce93ba3.chunk.css": "/hdomi/static/css/2.2ce93ba3.chunk.css",
+    "static/js/2.df5c1aa7.chunk.js": "/hdomi/static/js/2.df5c1aa7.chunk.js",
+    "static/js/2.df5c1aa7.chunk.js.map": "/hdomi/static/js/2.df5c1aa7.chunk.js.map",
     "index.html": "/hdomi/index.html",
-    "precache-manifest.e2c39994bfaeeff64e23c8deebdac59f.js": "/hdomi/precache-manifest.e2c39994bfaeeff64e23c8deebdac59f.js",
+    "precache-manifest.c9abde57e160abb49f8724a17892d3a2.js": "/hdomi/precache-manifest.c9abde57e160abb49f8724a17892d3a2.js",
     "service-worker.js": "/hdomi/service-worker.js",
-    "static/js/2.db600840.chunk.js.LICENSE.txt": "/hdomi/static/js/2.db600840.chunk.js.LICENSE.txt",
+    "static/css/2.2ce93ba3.chunk.css.map": "/hdomi/static/css/2.2ce93ba3.chunk.css.map",
+    "static/js/2.df5c1aa7.chunk.js.LICENSE.txt": "/hdomi/static/js/2.df5c1aa7.chunk.js.LICENSE.txt",
+    "static/media/UploadIcon.svg": "/hdomi/static/media/UploadIcon.1cedb6e9.svg",
+    "static/media/add.svg": "/hdomi/static/media/add.3dfb1b63.svg",
     "static/media/down-arrow.svg": "/hdomi/static/media/down-arrow.e5f3ec24.svg",
     "static/media/heart.svg": "/hdomi/static/media/heart.0f0a056e.svg",
     "static/media/menu.svg": "/hdomi/static/media/menu.0ab7e52e.svg",
+    "static/media/next.svg": "/hdomi/static/media/next.b8e18dc2.svg",
     "static/media/orders.svg": "/hdomi/static/media/orders.a33906a1.svg",
+    "static/media/remove.svg": "/hdomi/static/media/remove.c9f71c4c.svg",
     "static/media/right-arrow.svg": "/hdomi/static/media/right-arrow.5478f37e.svg",
     "static/media/search.svg": "/hdomi/static/media/search.b2feb1c7.svg",
     "static/media/texture.png": "/hdomi/static/media/texture.fe52ed05.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1644c9fa.js",
-    "static/js/2.db600840.chunk.js",
-    "static/js/main.439d5724.chunk.js"
+    "static/css/2.2ce93ba3.chunk.css",
+    "static/js/2.df5c1aa7.chunk.js",
+    "static/js/main.448f82e6.chunk.js"
   ]
 }
