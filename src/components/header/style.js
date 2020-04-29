@@ -7,6 +7,8 @@ import fonts from '../../shared/fonts';
 export const StyledHeader = styled.header`
   margin-bottom: 1.5em;
   padding-top: 5.375em;
+  position: relative;
+  z-index: 1;
 
   &[data-topbar="false"] {
     padding-top: 3em;

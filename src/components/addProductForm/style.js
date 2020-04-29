@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { title } from '../title/style';
 import theme from '../../shared/theme';
+import measurements from '../../shared/measurements';
 
 export const Form = styled.form`
   
@@ -8,6 +9,7 @@ export const Form = styled.form`
 
 export const FormContainer = styled.div`
   max-width: 25em;
+  padding-bottom: 1em;
 `;
 
 export const Title = styled.h2`
@@ -68,17 +70,17 @@ export const StepIconContainer = styled.div`
   position: relative;
   transition-property: border-color, background-color;
   transition-duration: .2s;
-
+  
   .svg {
     width: 100%;
     fill: #646463;
   }
-
+  
   &::after {
     content: '';
     position: absolute;
     z-index: -1;
-    width: 10em;
+    width: 14em;
     height: 2px;
     background-color: ${borderColor};
     top: 50%;
@@ -87,15 +89,76 @@ export const StepIconContainer = styled.div`
     transition: background-color .2s;
   }
 `;
-
+  
 export const StepText = styled.p`
   text-transform: capitalize;
 `;
-
+  
 export const SubTitle = styled.h3`
   font-size: 1.3rem;
+`;
+  
+export const InputContainer = styled.div`
+  position: relative;
+
+  .productForm__sizeSelect {
+    margin-bottom: .8em;
+  }
+
+  .productForm__selectChild__control {
+    border: 1px solid ${theme.border.grey};
+    border-radius: ${measurements.borderRadius.input};
+  }
+
+  .productForm__imageUploader {
+    margin-bottom: 1.5em;
+
+    .fileContainer {
+      box-shadow: none;
+      border: 1px solid ${theme.border.grey};
+      border-radius: ${measurements.borderRadius.input};
+    }
+
+    .deleteImage {
+      background-color: ${theme.bg.accent};
+    }
+  }
+
+  .productForm__imageUploaderButton {
+    background-color: ${theme.bg.accent};
+    transition: opacity .1s;
+    border-radius: ${measurements.borderRadius.input};
+    font-size: 1rem;
+
+    &:hover {
+      background-color: ${theme.bg.accent};
+      opacity: .6;
+    }
+  }
 `;
 
 export const DataList = styled.datalist``;
 
 export const Option = styled.option``
+
+export const Label = styled.label`
+  
+`;
+
+export const RemoveButton = styled.button`
+  background-color: transparent;
+  position: absolute;
+  width: 3rem;
+  right: -4em;
+  top: 36%;
+  border: none;
+  padding: .8em;
+
+  &:hover {
+    opacity: .6;
+  }
+`;
+
+export const RemoveIcon = styled.img`
+  width: 100%;
+`;

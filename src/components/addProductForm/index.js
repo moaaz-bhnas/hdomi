@@ -14,11 +14,15 @@ const AddProductForm = () => {
   const [ category, setCategory ] = useState('');
   const [ subCategory, setSubCategory ] = useState('');
   const [ description, setDescription ] = useState('');
+  const [ colors, setColors ] = useState([
+    { value: '#000000', sizes: [], images: [] }
+  ]);
   
   // Active step
   const [ activeStep, setActiveStep ] = useState(0);
 
-  const handleStepSubmit = useCallback((event, disabled) => {    
+  const handleStepSubmit = useCallback((event, disabled) => {   
+    console.log('disabled: ', disabled); 
     if (!disabled) {
       event.preventDefault();
       setActiveStep(activeStep + 1);
@@ -46,7 +50,11 @@ const AddProductForm = () => {
             setActiveStep={activeStep}
             onStepSubmit={handleStepSubmit}
           /> :
-          <ColorsAndSizes />
+          <ColorsAndSizes 
+            colors={colors}
+            setColors={setColors}
+            onStepSubmit={handleStepSubmit}
+          />
         }
       </FormContainer>
     </Form>

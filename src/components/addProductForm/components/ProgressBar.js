@@ -13,7 +13,6 @@ import PriceSvg from '../../../svgs/price';
 const steps = [
   { text: 'information',              Icon: InformationSvg },
   { text: 'colors\u00A0&\u00A0sizes', Icon: ColorsSvg },
-  { text: 'images',                   Icon: ImagesSvg },
   { text: 'price',                    Icon: PriceSvg }
 ];
 
