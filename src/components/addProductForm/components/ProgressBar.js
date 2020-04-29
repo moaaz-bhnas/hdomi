@@ -16,7 +16,8 @@ const steps = [
   { text: 'price',                    Icon: PriceSvg }
 ];
 
-const ProgressBar = () => {
+const ProgressBar = ({ activeStep }) => {
+  console.log(activeStep);
   return (
     <StyledProgressBar
       role="progressbar"
@@ -28,8 +29,8 @@ const ProgressBar = () => {
         steps.map(({ text, Icon }, index) => (
           <Step 
             key={text} 
-            data-finished={false}
-            data-active={index === 0}
+            data-finished={activeStep > index}
+            data-active={activeStep === index}
           >
             <StepIconContainer className="progressbar__iconContainer">
               <Icon />

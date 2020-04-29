@@ -33,7 +33,7 @@ const AddProductForm = () => {
     <Form>
       <Title>Add Product</Title>
 
-      <ProgressBar />
+      <ProgressBar activeStep={activeStep} />
 
       <FormContainer>
         {
