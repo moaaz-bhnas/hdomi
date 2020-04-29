@@ -162,3 +162,8 @@ export const RemoveButton = styled.button`
 export const RemoveIcon = styled.img`
   width: 100%;
 `;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

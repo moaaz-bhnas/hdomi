@@ -41,3 +41,8 @@ export const NextIcon = styled.img`
   width: 1em;
   margin-left: .55em;
 `;
+
+export const PreviousIcon = styled.img`
+  width: 1em;
+  margin-right: .55em;
+`;

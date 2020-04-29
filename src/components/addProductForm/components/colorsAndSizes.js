@@ -4,11 +4,12 @@ import {
   Label, 
   InputContainer,
   RemoveButton,
-  RemoveIcon
+  RemoveIcon,
+  ButtonsContainer
 } from '../style'
 import { Input, ColorInput } from '../../input/style';
 import Select from 'react-select';
-import { NextButton } from '../../button';
+import { NextButton, PreviousButton } from '../../button';
 import removeIcon from '../../../img/remove.svg';
 import ImageUploader from 'react-images-upload';
 
@@ -117,8 +118,10 @@ const ColorsAndSizes = ({ colors, setColors, onStepSubmit }) => {
           </InputContainer>
         ))
       }
-
-      <NextButton onClick={event => onStepSubmit(event, disabled)} />
+      <ButtonsContainer>
+        <PreviousButton />
+        <NextButton onClick={event => onStepSubmit(event, disabled)} />
+      </ButtonsContainer>
     </>
   );
 }

@@ -19,7 +19,7 @@ const AddProductForm = () => {
   ]);
   
   // Active step
-  const [ activeStep, setActiveStep ] = useState(0);
+  const [ activeStep, setActiveStep ] = useState(1);
 
   const handleStepSubmit = useCallback((event, disabled) => {   
     console.log('disabled: ', disabled); 
