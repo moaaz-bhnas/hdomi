@@ -7,7 +7,6 @@ const IndexPage = () => {
   return (
     <Container>
       <Banner />
-      <Categories />
     </Container>
   );
 }

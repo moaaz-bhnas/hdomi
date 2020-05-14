@@ -22,7 +22,7 @@ const Header = () => {
   const topBarHidden = user && user.seller;
 
   return (
-    <StyledHeader data-topbar={!topBarHidden} data-seller-center={sellerHeader}>
+    <StyledHeader data-topbar={/*!topBarHidden*/false} data-seller-center={sellerHeader}>
       <Title>{title}</Title>
 
       <Navigation>
@@ -32,10 +32,10 @@ const Header = () => {
           <SellerBar /> :
           <>
             <TopAndMiddleBarsContainer>
-              {!topBarHidden && <TopBar />}
+              {/* {!topBarHidden && <TopBar />} */}
               <MiddleBar />
             </TopAndMiddleBarsContainer>
-            <BottomBar />
+            {/* <BottomBar /> */}
           </>
         }
       </Navigation>

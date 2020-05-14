@@ -5,7 +5,7 @@ import measurements from '../../shared/measurements';
 import fonts from '../../shared/fonts';
 
 export const StyledHeader = styled.header`
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
   padding-top: 5.375em;
   position: relative;
   z-index: 1;
@@ -233,7 +233,6 @@ export const AuthLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   padding: .5rem 0;
-  font-weight: 700;
 
   &:hover,
   &:focus {
@@ -275,24 +274,6 @@ export const HamburgerIcon = styled.img`
   transition: opacity .1s;
 `;
 
-export const LogoLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-  margin-right: 1em;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-`;
-
-// export const LogoImg = styled.img`
-//   width: 8rem;
-// `;
-
-export const LogoText = styled.span`
-  font-size: 2rem;
-  font-family: ${fonts.serif};
-`;
-
 const listStyles = css`
   list-style: none;
   padding-left: 0;
@@ -332,7 +313,6 @@ export const DropdownContainer = styled.div`
 
 export const DropdownToggler = styled.button`
   ${buttonStyles}
-  font-weight: 700;
   color: #fff;
   height: 3rem;
   transition: .1s opacity;
@@ -531,4 +511,29 @@ export const SellerSidebarLinkText = styled.span`
 
 export const RightArrow = styled.img`
   width: .75em;
+`;
+
+export const NavList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 2em 0 auto;
+`;
+
+export const NavListItem = styled.li`
+  
+`;
+
+export const NavListLink = styled(Link)`
+  display: block;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    outline-color: #fff;
+  }
 `;

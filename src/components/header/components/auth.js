@@ -10,7 +10,7 @@ const Auth = () => {
     <StyledAuth>
       <AuthLink to="login">Log in</AuthLink>
 
-      <Span>or</Span> 
+      <Span>|</Span> 
       
       <AuthLink to="signup">Create account</AuthLink>
     </StyledAuth>

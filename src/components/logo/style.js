@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import fonts from '../../shared/fonts';
 
 export const LogoLink = styled(Link)`
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   padding: .2em 0;
   display: flex;

@@ -11,6 +11,8 @@ import Auth from './auth';
 import Chat from './chat';
 import AccountDropdown from './accountDropdown';
 import { AuthContext } from '../../../contexts/auth';
+import Logo from '../../logo';
+import NavigationList from './navigationList';
 
 const MiddleBar = () => {
   const user = useContext(AuthContext);
@@ -19,14 +21,16 @@ const MiddleBar = () => {
   return (
     <StyledMiddleBar>
       <Container>
-        <Sidebar />
-        <SearchForm />
+        <Logo />
+        {/* <Sidebar /> */}
+        {/* <SearchForm /> */}
+        <NavigationList />
         {
           user ?
           <>
-            <Favorites />
+            {/* <Favorites />
             <Chat />
-            <StoreLink to="/seller" ref={storeLinkRef}>My store</StoreLink>
+            <StoreLink to="/seller" ref={storeLinkRef}>My store</StoreLink> */}
             <AccountDropdown previousInteractiveElement={storeLinkRef} />
           </> :
           <Auth />
