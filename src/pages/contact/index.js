@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import { Title, List, Item, Link } from './style';
 import { Container } from '../../components/container/style';
+import ContactForm from '../../components/contactForm';
 
 const Contact = () => {
   return (
@@ -17,6 +18,8 @@ const Contact = () => {
           Twitter: <Link href="https://twitter.com/moaaz_bhnas">@moaaz_bhnas</Link>
         </Item>
       </List>
+
+      <ContactForm />
     </Container>
   );
 }

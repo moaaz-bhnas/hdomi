@@ -14,7 +14,7 @@ export const Title = styled.h2`
 `;
 
 export const List = styled.ul`
-  
+  margin-bottom: 3em;
 `;
 
 export const Item = styled.li`
