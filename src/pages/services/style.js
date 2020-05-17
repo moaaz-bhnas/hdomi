@@ -28,3 +28,27 @@ export const ServicesContainer = styled.div`
   display: flex;
   align-items: flex-start;
 `;
+
+export const List = styled.ul`
+  list-style: none;
+  padding-left: 0;
+  margin-top: 3em;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Item = styled.li`
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Service = styled.p`
+  font-weight: 600;
+`;
+
+export const Icon = styled.img`
+  width: 5em;
+`;
