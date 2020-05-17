@@ -14,7 +14,7 @@ const NavigationList = () => {
         list.map(item => (
         <NavListItem key={item}>
           <NavListLink 
-            to={`/${item}`}
+            to={`/${(item === 'contact us') ? 'contact' : item}`}
             onMouseDown={e => e.preventDefault()}
           >{item}</NavListLink>
         </NavListItem>

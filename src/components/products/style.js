@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import theme from '../../shared/theme';
 import fonts from '../../shared/fonts';
 import texture from '../../img/texture.png';
+import { title } from '../title/style';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  margin-bottom: 2em;
+`;
 
 export const Title = styled.h2`
-  font-family: ${fonts.serif};
-  font-size: 2rem;
-  margin: 0 0 1.25em 0;
+  ${title};
 `;
 
 export const Grid = styled.ul`
