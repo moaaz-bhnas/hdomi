@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df8060bf56169479ce5f8f0bbe14c1a5",
+    "revision": "c002201c110fa17e54b642961691bd93",
     "url": "/hdomi/index.html"
   },
   {
-    "revision": "6826a5ec293956f8d1b3",
+    "revision": "38cb930561c56bef8faa",
     "url": "/hdomi/static/css/2.2ce93ba3.chunk.css"
   },
   {
-    "revision": "6826a5ec293956f8d1b3",
-    "url": "/hdomi/static/js/2.41a1fcaa.chunk.js"
+    "revision": "38cb930561c56bef8faa",
+    "url": "/hdomi/static/js/2.b9cc3b8e.chunk.js"
   },
   {
     "revision": "0f59aded427042d87c15d0910a90fb3b",
-    "url": "/hdomi/static/js/2.41a1fcaa.chunk.js.LICENSE.txt"
+    "url": "/hdomi/static/js/2.b9cc3b8e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3d9ece3ccef1eb4d61db",
-    "url": "/hdomi/static/js/main.0f4ce2e1.chunk.js"
+    "revision": "60f983ee22b570956c63",
+    "url": "/hdomi/static/js/main.8532226a.chunk.js"
   },
   {
     "revision": "83d79f49d451bb286068d0d3adaa31bf",
-    "url": "/hdomi/static/js/main.0f4ce2e1.chunk.js.LICENSE.txt"
+    "url": "/hdomi/static/js/main.8532226a.chunk.js.LICENSE.txt"
   },
   {
     "revision": "0c6b7ea2abe6075eacba",
@@ -72,12 +72,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hdomi/static/media/banner.e9708bd8.jpg"
   },
   {
+    "revision": "dc8471bdd468b468376217a3f4e7b577",
+    "url": "/hdomi/static/media/customer.dc8471bd.svg"
+  },
+  {
+    "revision": "72f6b318e396bc37bde9a755dd0a75f8",
+    "url": "/hdomi/static/media/delivery.72f6b318.svg"
+  },
+  {
     "revision": "e5f3ec247f6ab6fb64af38e2bf4cc163",
     "url": "/hdomi/static/media/down-arrow.e5f3ec24.svg"
   },
   {
     "revision": "2e2c3a011f928f26e2790a361e09845a",
     "url": "/hdomi/static/media/facebook.2e2c3a01.svg"
+  },
+  {
+    "revision": "ba6a593d325c9d9bb6e5b09a68d5c651",
+    "url": "/hdomi/static/media/happy.ba6a593d.jpg"
   },
   {
     "revision": "0f0a056e8d5201f34189fc50f0566f97",
@@ -106,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c9f71c4c2ff4a443ffe1962c47c4149d",
     "url": "/hdomi/static/media/remove.c9f71c4c.svg"
+  },
+  {
+    "revision": "bc0edb1bdbcc008c40219adc8028c6b3",
+    "url": "/hdomi/static/media/return.bc0edb1b.svg"
   },
   {
     "revision": "5478f37ef04f6a7ede18d763c5c2a8ba",
