@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
-import { StyledForm, Title } from './style';
+import { StyledForm, Title, Button } from './style';
 import { Input, TextArea } from '../input/style';
+
 
 const Form = () => {
   return (
@@ -23,6 +24,7 @@ const Form = () => {
         maxLength="100"
         required
       />
+      <Button type="submit">Submit</Button>
     </StyledForm>
   );
 }
