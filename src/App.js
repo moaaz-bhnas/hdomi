@@ -9,8 +9,6 @@ import {
   StyledApp,
   Main
 } from './style';
-import RegisterPage from './pages/register';
-import SellerPage from './pages/seller';
 import ServicesPage from './pages/services';
 import ContactPage from './pages/contact';
 import AboutPage from './pages/about';
