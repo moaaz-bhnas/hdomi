@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c002201c110fa17e54b642961691bd93",
+    "revision": "7d5f76ebbefa1291730ca2b0316552b6",
     "url": "/hdomi/index.html"
   },
   {
-    "revision": "38cb930561c56bef8faa",
-    "url": "/hdomi/static/css/2.2ce93ba3.chunk.css"
-  },
-  {
-    "revision": "38cb930561c56bef8faa",
-    "url": "/hdomi/static/js/2.b9cc3b8e.chunk.js"
+    "revision": "304811674af4c0389ea1",
+    "url": "/hdomi/static/js/2.70a88415.chunk.js"
   },
   {
     "revision": "0f59aded427042d87c15d0910a90fb3b",
-    "url": "/hdomi/static/js/2.b9cc3b8e.chunk.js.LICENSE.txt"
+    "url": "/hdomi/static/js/2.70a88415.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "60f983ee22b570956c63",
-    "url": "/hdomi/static/js/main.8532226a.chunk.js"
+    "revision": "69223897b821947a5d9e",
+    "url": "/hdomi/static/js/main.d7bfd9e6.chunk.js"
   },
   {
     "revision": "83d79f49d451bb286068d0d3adaa31bf",
-    "url": "/hdomi/static/js/main.8532226a.chunk.js.LICENSE.txt"
+    "url": "/hdomi/static/js/main.d7bfd9e6.chunk.js.LICENSE.txt"
   },
   {
     "revision": "0c6b7ea2abe6075eacba",
@@ -60,16 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hdomi/static/media/8.41213a46.jpg"
   },
   {
-    "revision": "1cedb6e919bfed6a2c1ec00b5d8ee620",
-    "url": "/hdomi/static/media/UploadIcon.1cedb6e9.svg"
-  },
-  {
-    "revision": "3dfb1b63b201351dd6b197ad25ec4cc1",
-    "url": "/hdomi/static/media/add.3dfb1b63.svg"
-  },
-  {
     "revision": "e9708bd8d8e8cb4ad4ee3999e54eae48",
     "url": "/hdomi/static/media/banner.e9708bd8.jpg"
+  },
+  {
+    "revision": "452a301d0b07d28056b956ebad1ce8f5",
+    "url": "/hdomi/static/media/bout.452a301d.jpg"
   },
   {
     "revision": "dc8471bdd468b468376217a3f4e7b577",
@@ -104,20 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hdomi/static/media/menu.0ab7e52e.svg"
   },
   {
-    "revision": "b8e18dc24a88f04af6953e5b7384a69b",
-    "url": "/hdomi/static/media/next.b8e18dc2.svg"
-  },
-  {
     "revision": "a33906a14a1b8ad985cf304d7b3b6e67",
     "url": "/hdomi/static/media/orders.a33906a1.svg"
-  },
-  {
-    "revision": "add4abc03978ece5ee683c5f100b38f6",
-    "url": "/hdomi/static/media/previous.add4abc0.svg"
-  },
-  {
-    "revision": "c9f71c4c2ff4a443ffe1962c47c4149d",
-    "url": "/hdomi/static/media/remove.c9f71c4c.svg"
   },
   {
     "revision": "bc0edb1bdbcc008c40219adc8028c6b3",

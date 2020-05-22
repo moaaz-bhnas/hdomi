@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.js": "/hdomi/static/js/main.8532226a.chunk.js",
-    "main.js.map": "/hdomi/static/js/main.8532226a.chunk.js.map",
+    "main.js": "/hdomi/static/js/main.d7bfd9e6.chunk.js",
+    "main.js.map": "/hdomi/static/js/main.d7bfd9e6.chunk.js.map",
     "runtime-main.js": "/hdomi/static/js/runtime-main.1644c9fa.js",
     "runtime-main.js.map": "/hdomi/static/js/runtime-main.1644c9fa.js.map",
-    "static/css/2.2ce93ba3.chunk.css": "/hdomi/static/css/2.2ce93ba3.chunk.css",
-    "static/js/2.b9cc3b8e.chunk.js": "/hdomi/static/js/2.b9cc3b8e.chunk.js",
-    "static/js/2.b9cc3b8e.chunk.js.map": "/hdomi/static/js/2.b9cc3b8e.chunk.js.map",
+    "static/js/2.70a88415.chunk.js": "/hdomi/static/js/2.70a88415.chunk.js",
+    "static/js/2.70a88415.chunk.js.map": "/hdomi/static/js/2.70a88415.chunk.js.map",
     "index.html": "/hdomi/index.html",
-    "precache-manifest.913d065f1244988170f9b7c6b7d8f46e.js": "/hdomi/precache-manifest.913d065f1244988170f9b7c6b7d8f46e.js",
+    "precache-manifest.6cbdc8054c61ff188aacc8610b001e7a.js": "/hdomi/precache-manifest.6cbdc8054c61ff188aacc8610b001e7a.js",
     "service-worker.js": "/hdomi/service-worker.js",
-    "static/css/2.2ce93ba3.chunk.css.map": "/hdomi/static/css/2.2ce93ba3.chunk.css.map",
-    "static/js/2.b9cc3b8e.chunk.js.LICENSE.txt": "/hdomi/static/js/2.b9cc3b8e.chunk.js.LICENSE.txt",
-    "static/js/main.8532226a.chunk.js.LICENSE.txt": "/hdomi/static/js/main.8532226a.chunk.js.LICENSE.txt",
+    "static/js/2.70a88415.chunk.js.LICENSE.txt": "/hdomi/static/js/2.70a88415.chunk.js.LICENSE.txt",
+    "static/js/main.d7bfd9e6.chunk.js.LICENSE.txt": "/hdomi/static/js/main.d7bfd9e6.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/hdomi/static/media/1.ceb1bb48.jpg",
     "static/media/2.jpg": "/hdomi/static/media/2.237ead82.jpg",
     "static/media/3.jpg": "/hdomi/static/media/3.7b7f716a.jpg",
@@ -21,9 +19,8 @@
     "static/media/6.jpg": "/hdomi/static/media/6.3860e067.jpg",
     "static/media/7.jpg": "/hdomi/static/media/7.32f2bf5f.jpg",
     "static/media/8.jpg": "/hdomi/static/media/8.41213a46.jpg",
-    "static/media/UploadIcon.svg": "/hdomi/static/media/UploadIcon.1cedb6e9.svg",
-    "static/media/add.svg": "/hdomi/static/media/add.3dfb1b63.svg",
     "static/media/banner.jpg": "/hdomi/static/media/banner.e9708bd8.jpg",
+    "static/media/bout.jpg": "/hdomi/static/media/bout.452a301d.jpg",
     "static/media/customer.svg": "/hdomi/static/media/customer.dc8471bd.svg",
     "static/media/delivery.svg": "/hdomi/static/media/delivery.72f6b318.svg",
     "static/media/down-arrow.svg": "/hdomi/static/media/down-arrow.e5f3ec24.svg",
@@ -32,10 +29,7 @@
     "static/media/heart.svg": "/hdomi/static/media/heart.0f0a056e.svg",
     "static/media/in.svg": "/hdomi/static/media/in.2afa7b18.svg",
     "static/media/menu.svg": "/hdomi/static/media/menu.0ab7e52e.svg",
-    "static/media/next.svg": "/hdomi/static/media/next.b8e18dc2.svg",
     "static/media/orders.svg": "/hdomi/static/media/orders.a33906a1.svg",
-    "static/media/previous.svg": "/hdomi/static/media/previous.add4abc0.svg",
-    "static/media/remove.svg": "/hdomi/static/media/remove.c9f71c4c.svg",
     "static/media/return.svg": "/hdomi/static/media/return.bc0edb1b.svg",
     "static/media/right-arrow.svg": "/hdomi/static/media/right-arrow.5478f37e.svg",
     "static/media/search.svg": "/hdomi/static/media/search.b2feb1c7.svg",
@@ -44,8 +38,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1644c9fa.js",
-    "static/css/2.2ce93ba3.chunk.css",
-    "static/js/2.b9cc3b8e.chunk.js",
-    "static/js/main.8532226a.chunk.js"
+    "static/js/2.70a88415.chunk.js",
+    "static/js/main.d7bfd9e6.chunk.js"
   ]
 }
