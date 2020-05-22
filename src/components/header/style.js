@@ -516,8 +516,9 @@ export const RightArrow = styled.img`
 export const NavList = styled.ul`
   display: flex;
   list-style: none;
-  padding-left: 0;
-  margin: 0 2em 0 auto;
+  padding: 0 1em;
+  margin: 0 1em 0 auto;
+  border-right: 1px solid #fff;
 `;
 
 export const NavListItem = styled.li`

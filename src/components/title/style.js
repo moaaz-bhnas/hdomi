@@ -5,4 +5,5 @@ export const title = css`
   font-family: ${fonts.serif};
   font-size: 1.9rem;
   margin-bottom: 1em;
+  letter-spacing: .005em;
 `;

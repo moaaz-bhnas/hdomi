@@ -31,6 +31,11 @@ export const Cover = styled.img`
   width: 100%;
   height: 14em;
   object-fit: cover;
+  transition: .3s transform;
+
+  &:hover {
+    transform: rotate(-5deg);
+  }
 `;
 
 export const ProductName = styled.p`

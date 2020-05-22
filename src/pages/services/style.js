@@ -1,13 +1,6 @@
 import styled from 'styled-components';
-import { title } from '../../components/title/style'
-
-export const Section = styled.section`
-  
-`;
-
-export const Content = styled.div`
-  
-`;
+import { title } from '../../components/title/style';
+import bg from '../../img/happy.jpg';
 
 export const P = styled.p`
   
@@ -17,16 +10,18 @@ export const Title = styled.h2`
   ${title}
 `;
 
-export const Img = styled.img`
-  width: 12em;
-  margin: 1.8em 2em 0 0;
-`;
-
 export const ServicesContainer = styled.div`
   max-width: 62rem;
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 48px; left: 0; right: 0; bottom: 117px;
+    background: url(${bg}) no-repeat 50% 50% / cover;
+    opacity: .1;
+    z-index: -1;
+  }
 `;
 
 export const List = styled.ul`

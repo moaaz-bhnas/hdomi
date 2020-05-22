@@ -27,4 +27,5 @@ export const LogoText = styled.span`
   font-family: ${fonts.serif};
   font-size: ${props => props.fontSize || '2rem'};
   color: ${props => props.color};
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, .5);
 `;

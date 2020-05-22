@@ -14,24 +14,21 @@ const services = [
 const Services = () => {
   return (
     <ServicesContainer>
-      <Img src={image} alt="" />
-      <Content>
-        <Title>Services</Title>
-        <P>At Hdomi, we provide our customers with high quality 100% Egyptian cotton.</P>
-        <P>We have a very helpful and friendly customer services. Our delivery is the fastest, and it's free.</P>
-        <P>Out returns policy is very flexible too.</P>
+      <Title>Services</Title>
+      <P>At Hdomi, we provide our customers with high quality 100% Egyptian cotton.</P>
+      <P>We have a very helpful and friendly customer services. Our delivery is the fastest, and it's free.</P>
+      <P>Out returns policy is very flexible too.</P>
 
-        <List>
-          {
-            services.map(service => (
-              <Item>
-                <Icon src={service.img} alt="" />
-                <Service>{service.name}</Service>
-              </Item>
-            ))
-          }
-        </List>
-      </Content>
+      <List>
+        {
+          services.map(service => (
+            <Item>
+              <Icon src={service.img} alt="" />
+              <Service>{service.name}</Service>
+            </Item>
+          ))
+        }
+      </List>
     </ServicesContainer>
   );
 }
